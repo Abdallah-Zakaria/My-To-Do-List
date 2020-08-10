@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+    background: url(images/background.jpg);
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+input , label{
+    display: block;
+    width: 100%;
+}
+section{
+    display: inline-block;
+    margin: 50px;
+    background-color: rgba(0, 0, 255, 0.445);
+    margin: 100px;
+    
+}
+#section1 {
+    padding: 50px;
+    line-height: 25px;
+}
+#submitButton{
+    width: 50%;
+    background-color: black;
+    color: white;
+    
+}
+
+#section2 {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+table{
+    border: white 2px solid;
+    background-color: black;
+    
+}

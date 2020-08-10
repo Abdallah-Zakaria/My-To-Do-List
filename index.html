@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>My To do list</h1>
+    </header>
+    <main>
+        <section id="section1">
+            <form id="taskForm">
+                <table>
+                    <tr>
+                        <label for="task">Task</label>
+                    </tr>
+                    <tr>
+                        <input required id="task" type="text" >
+                    </tr>
+                    <tr>
+                        <label  for="date">Date:</label>
+                    </tr>
+                    <tr>
+                        <input required id="date" type="date">
+                    </tr>
+                    <tr>
+                        <label for="urgency">Urgency</label>
+                    </tr>
+                    <tr>
+                        <select id="urgency">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </tr>
+                    <tr>
+                        <input id="submitButton" type="submit">
+                    </tr>
+                </table>
+            </form>
+        </section>
+        <section id="section2">
+            <table id="resultTable"> 
+                <tr>
+                    <td>Task</td>
+                    <td>Date</td>
+                    <td>Urgency</td>
+                    <td>Done</td>
+                </tr>
+                
+            </table>
+            <button>Clear All Data</button>
+        </section>
+    </main>
+</body>
+<script src="app.js"></script>
+
+</html>
