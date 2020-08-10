@@ -9,21 +9,21 @@ if (Object.keys(localStorage).length !== 0) {
 
             var resultTable = document.getElementById("resultTable")
             var tr = document.createElement("tr")
-            tr.setAttribute("id", taskListAll[i][1])
+            tr.setAttribute("id", taskListAll[i][0])
             resultTable.appendChild(tr)
     
+            var td = document.createElement("td")
+            td.textContent = taskListAll[i][0]
+            tr.appendChild(td)
             var td = document.createElement("td")
             td.textContent = taskListAll[i][1]
             tr.appendChild(td)
             var td = document.createElement("td")
             td.textContent = taskListAll[i][2]
             tr.appendChild(td)
-            var td = document.createElement("td")
-            td.textContent = taskListAll[i][3]
-            tr.appendChild(td)
             var delButton = document.createElement("button")
             delButton.textContent = "X"
-            delButton.setAttribute("id", taskListAll[i][1])
+            delButton.setAttribute("id", taskListAll[i][0])
             delButton.setAttribute("onClick", "reply_click(this.id)")
             tr.appendChild(delButton)
         }
@@ -74,28 +74,13 @@ taskForm.addEventListener('submit', function () {
 var reply_click = function (clicked_id) {
     var deletedTask = document.getElementById(clicked_id)
     deletedTask.remove()
+
 }
 
-
-// for (var i = 0; i < taskListAll.length; i++) {
-
+//  var clearAll = document.getElementById("clearAll")
+//  clearAll.addEventListener("onClick" , function(){
 //     var resultTable = document.getElementById("resultTable")
-//     var tr = document.createElement("tr")
-//     tr.setAttribute("id", taskListAll[i][1])
-//     resultTable.appendChild(tr)
+//     resultTable.remove()
+//  })
 
-//     var td = document.createElement("td")
-//     td.textContent = taskListAll[i][1]
-//     tr.appendChild(td)
-//     var td = document.createElement("td")
-//     td.textContent = taskListAll[i][2]
-//     tr.appendChild(td)
-//     var td = document.createElement("td")
-//     td.textContent = taskListAll[i][3]
-//     tr.appendChild(td)
-//     var delButton = document.createElement("button")
-//     delButton.textContent = "X"
-//     delButton.setAttribute("id", taskListAll[i][1])
-//     delButton.setAttribute("onClick", "reply_click(this.id)")
-//     tr.appendChild(delButton)
-// }
+
